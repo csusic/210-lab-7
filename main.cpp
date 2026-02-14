@@ -24,10 +24,8 @@ int main() {
     cout << endl;
     cout << "Reversed array: ";
     
-    //reverseArray(ptr);
+    reverseArray(ptr);
     displayArray(ptr);
-    
-    //delete [] ptr; //delete array 
    
     return 0;
 }
