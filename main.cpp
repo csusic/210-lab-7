@@ -33,7 +33,7 @@ int main() {
     reverseArray(ptr);
     displayArray(ptr);
 
-    //delete [] ptr; //delete array
+    delete [] ptr; //delete array
    
     return 0;
 }
