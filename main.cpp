@@ -1,6 +1,7 @@
 // COMSC-210 | Lab 7 | Christine Susic
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 void reverseArray(string []);
@@ -10,11 +11,15 @@ string* displayArray(string []);
 const int SIZE = 5;
 
 int main() {
-    //names array
-    string names[SIZE] = {"Frieda", "Jane", "Alfie", "Leonard", "Penny"};
     //string pointer that points to names array
     string *ptr = nullptr;
-    ptr = names;
+    ptr = new string[SIZE];
+    //names array
+    ptr[0] = "Frieda"; 
+    ptr[1] = "Jane"; 
+    ptr[2] = "Alfie"; 
+    ptr[3] = "Leonard"; 
+    ptr[4] = "Penny";
     
     //Original array output
     cout << "Original array: ";
@@ -22,10 +27,13 @@ int main() {
         cout << ptr[i] << " ";
     }
     cout << endl;
+    //Reversed array
     cout << "Reversed array: ";
     
     reverseArray(ptr);
     displayArray(ptr);
+
+    //delete [] ptr; //delete array
    
     return 0;
 }
@@ -40,7 +48,7 @@ void reverseArray(string arr[SIZE]) {
 }
 
 //receive dynamic string array
-//outputs elements
+//outputs reversed array elements
 string* displayArray(string arr[SIZE]) {
     for (int i = 0; i < SIZE; i++) {
         cout << arr[i] << " ";
