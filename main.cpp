@@ -16,7 +16,6 @@ int main() {
     string *ptr = nullptr;
     ptr = names;
     
-    
     displayArray(ptr);
     reverseArray(ptr);
     
@@ -28,9 +27,11 @@ int main() {
 //receive dynamic string array
 //outputs elements
 string* displayArray(string arr[SIZE]) {
+    cout << "Original array: ";
     for (int i = 0; i < SIZE; i++) {
         cout << arr[i] << " ";
     } 
+    cout << endl;
     return arr;
 }
 
@@ -38,6 +39,10 @@ string* displayArray(string arr[SIZE]) {
 //reverses the elements
 //returns a pointer to modified array
 void reverseArray(string arr[SIZE]) {
+    cout << "Reversed array: ";
+    for (int i = 0; i < SIZE/2; i++) {
+        swap(arr[i], arr[SIZE]);
+    }
     for (int i = 0; i < SIZE; i++) {
         cout << arr[i] << " ";
     }
