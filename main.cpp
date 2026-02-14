@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-void* reverseArray(string []);
+void reverseArray(string []);
 string* displayArray(string []);
 
 //size of array
@@ -14,7 +14,8 @@ int main() {
     string *ptr = nullptr;
     //new string array
     ptr = new string[SIZE];
-    string names[SIZE] = {Frieda, Jane, Alfie, Leonard, Penny};
+    string arr[SIZE] = {"Frieda", "Jane", "Alfie", "Leonard", "Penny"};
+    
     
     reverseArray(ptr);
     displayArray(ptr);
@@ -27,17 +28,17 @@ int main() {
 //recieves dynamic string array
 //reverses the elements
 //returns a pointer to modified array
-void* reverseArray(string names[SIZE]) {
+void reverseArray(string arr[SIZE]) {
     for (int i = 0; i < SIZE; i++) {
         cout << arr[i] << " ";
     }
-    return arr;
-};
+}
 
 //receive dynamic string array
 //outputs elements
-string* displayArray(string names[SIZE]) {
+string* displayArray(string arr[SIZE]) {
     for (int i = 0; i < SIZE; i++) {
         cout << arr[i] << " ";
     } 
-};
+    return arr;
+}
